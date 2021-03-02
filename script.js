@@ -72,7 +72,6 @@ function handleCardClick(event) {
   // you can use event.target to see which element was clicked
     
     if (canClick) {
-        console.log("you just clicked", event.target);
         cardsPicked++;
         cardArr[cardsPicked-1] = event.target;
         cardArr[cardsPicked-1].style.backgroundColor = cardArr[cardsPicked-1].className;
@@ -81,9 +80,6 @@ function handleCardClick(event) {
                 cardArr[1] = null;
                 cardsPicked--;
             } else if (cardArr[0].style.backgroundColor === cardArr[1].style.backgroundColor) {
-                console.log("pass1");
-                console.log(`cardArr[0] = ${cardArr[0].style.backgroundColor}`);
-                console.log(`cardArr[1] = ${cardArr[1].style.backgroundColor}`);
                 cardArr[0] = null;
                 cardArr[1] = null;
                 cardsPicked = 0;
